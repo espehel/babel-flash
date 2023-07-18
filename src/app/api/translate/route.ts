@@ -12,6 +12,7 @@ export async function GET(req: Request) {
   }
 
   const Translator = new v2.Translate({ key: process.env.TRANSLATE_API_KEY });
+  // @ts-expect-error
   const res = await Translator.translate(input, { to, from });
 
   return NextResponse.json(res);
