@@ -26,7 +26,7 @@ export default function CardForm() {
     );
     const [target] = await res.json();
     setTargetText(target);
-  }, [inputText, inputLanguage, targetLanguage]);
+  }, [inputText, inputLanguage, targetLanguage, setTargetText]);
 
   const translateToInput = useCallback(async () => {
     const res = await fetch(
@@ -34,7 +34,7 @@ export default function CardForm() {
     );
     const [target] = await res.json();
     setInputText(target);
-  }, [targetText, targetLanguage, inputLanguage]);
+  }, [targetText, targetLanguage, inputLanguage, setInputText]);
 
   const handleFormAction = useCallback(
     async (formData: FormData) => {
@@ -64,7 +64,7 @@ export default function CardForm() {
             </div>
           );
     },
-    [inputText, targetText, deck]
+    [inputText, targetText, deck, setInputText, setTargetText]
   );
 
   return (

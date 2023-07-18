@@ -1,3 +1,4 @@
+'use server';
 import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
 import { ReadonlyRequestCookies } from 'next/dist/server/web/spec-extension/adapters/request-cookies';
 import { Card, CardInsert, Deck, DeckInsert, DeckJoined } from '@/types/database-types';
