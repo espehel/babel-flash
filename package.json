@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint && tsc",
+    "generate-types": "supabase gen types typescript --project-id qzgskafcefwvrbhcbetf > src/types/database-types.generated.ts"
   },
   "dependencies": {
     "@google-cloud/translate": "^7.2.2",
@@ -16,14 +17,19 @@
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
     "autoprefixer": "10.4.14",
+    "classnames": "^2.3.2",
+    "daisyui": "^3.2.1",
     "eslint": "8.44.0",
     "eslint-config-next": "13.4.9",
+    "moment": "^2.29.4",
     "next": "13.4.9",
     "postcss": "8.4.25",
     "prettier": "^3.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-select": "^5.7.4",
     "react-toastify": "^9.1.3",
+    "supabase": "^1.77.9",
     "tailwindcss": "3.3.2",
     "typescript": "5.1.6"
   }
